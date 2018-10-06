@@ -1,0 +1,73 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{todonotes}
+\usepackage{tikz,lipsum,lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{hyperref}
+\usepackage{pifont}
+
+\title{Lecture 01}
+\author{Tom Cheung}
+\date{October 2018}
+
+\begin{document}
+
+\maketitle
+
+\part*{Supervised learning}
+\begin{center}
+    \begin{tabular}{ l | r }		
+        \textbf{feature} & \textbf{target} \\\hline
+        ~~~$x^{(0)}$ & $y^{(0)}$ \\ 
+        ~~~$x^{(1)}$ & $y^{(1)}$ \\
+        ~~~\vdots    & \vdots \\ 
+        ~~~$x^{(i)}$ & $y^{(i)}$
+    \end{tabular}
+\end{center}
+\begin{itemize}
+    \item \textcolor{cyan}{training example: }    $(x^{(i)},~y^{(i)})$
+    \item \textcolor{cyan}{training set: } ~~~~~~~$\left\{(x^{(i)},~y^{(i)});i = 1, \cdots, m\right\}$
+    \item space of input and output               \textcolor{red}{$\mathcal{X}, \mathcal{Y}$}
+    \item hypothesis: ~~~~~~~~~~                  $h: $ $\mathcal{X} \mapsto \mathcal{Y}$
+\end{itemize}\par\par
+\begin{description}[align=left]
+\item [\textbf{REGRESSION}] ~~~~~~~\textit{\textcolor{blue}{continuous}}
+\item [\textbf{CLASSIFICATION}]    \textit{\textcolor{blue}{discrete}}
+\end{description}
+\section{Linear Regression}
+\framebox{feature selection\textcolor{red}{\textit{\textbf{!?}}}} \todo{stay tuned} \\
+
+% https://www.overleaf.com/latex/examples/drawing-coloured-boxes-using-tcolorbox/pvknncpjyfbp
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+    \begin{equation}
+        h_\theta(x) = \theta_{0} + \theta_{1}x_{1} + \theta_{2}x_{2}
+    \end{equation}
+   \tcblower
+  $\theta_{i}: $ parameter or weight ~~~~~~~~~~~~~~~~~~~~~~~~~~~ $x_{0} = 1: $ intercept term
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+    \begin{equation}
+        h(x) = \sum_{i = 0}^{n} \theta_{i}x_{i} = \theta^{\mathrm{T}}x
+    \end{equation}
+\end{tcolorbox}
+
+\begin{tcolorbox}[enhanced,attach boxed title to top center={yshift=-3mm,yshifttext=-1mm},
+  colback=blue!5!white,colframe=blue!75!black,colbacktitle=red!80!black,
+  title=cost function,fonttitle=\bfseries,
+  boxed title style={size=small,colframe=red!50!black} ]
+    \begin{equation}
+        J(\theta) = \frac{1}{2}\sum_{i = 1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})^2
+    \end{equation}
+\end{tcolorbox}
+\framebox{{\textit{The ordinary least squares
+regression model}~\textcolor{red}{\textbf{\textit{!?}}}}}
+\footnote{\href{https://en.wikipedia.org/wiki/Overdetermined_system}{The method of ordinary least squares can be used to find an approximate solution to overdetermined systems.} \\
+\textit{see}~\ding{43}: \textbf{\textcolor{blue}{Approximate solutions}}}
+
+\end{document}
