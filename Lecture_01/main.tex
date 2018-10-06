@@ -9,6 +9,26 @@
 \usepackage[most]{tcolorbox}
 \usepackage{hyperref}
 \usepackage{pifont}
+\hypersetup{
+    % bookmarks=true,         % show bookmarks bar?
+    unicode=false,          % non-Latin characters in Acrobat’s bookmarks
+    pdftoolbar=true,        % show Acrobat’s toolbar?
+    pdfmenubar=true,        % show Acrobat’s menu?
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={Lecture 01},    % title
+    pdfauthor={Tom Cheung},     % author
+    pdfsubject={machine learning},   % subject of the document
+    pdfcreator={overleaf},   % creator of the document
+    pdfproducer={https://www.overleaf.com/}, % producer of the document
+    pdfkeywords={definition, supervised learning, linear regression}, % list of keywords
+    pdfnewwindow=true,      % links in new PDF window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=orange          % color of external links
+}
 
 \title{Lecture 01}
 \author{Tom Cheung}
@@ -17,7 +37,27 @@
 \begin{document}
 
 \maketitle
-
+\part*{Machine Learning}
+\section{Definition}
+    \begin{enumerate}
+        \item \href{https://ieeexplore.ieee.org/document/5392560}{Arthur Samuel}
+        \item \href{http://www.cs.cmu.edu/~tom/}{Tom M. Mitchell}
+    \end{enumerate}
+ 
+\section{Parts}
+    \begin{itemize}
+        \item supervised learning
+            \begin{itemize}
+                \item Regression
+                \item Classification
+            \end{itemize}
+        \item learning theory 
+        \item unsupervised learning
+            \begin{itemize}
+                \item \textbf{ICA algorithm} \todo{stay tuned}
+            \end{itemize}
+        \item reinforcement learning
+    \end{itemize}
 \part*{Supervised learning}
 \begin{center}
     \begin{tabular}{ l | r }		
